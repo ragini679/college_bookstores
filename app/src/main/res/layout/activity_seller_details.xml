@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EEEE"
+    android:orientation="vertical"
+    tools:context=".seller_details">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingLeft="5dp"
+                android:text="ADD DETAILS OF THE BOOK"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/guideline3"
+                app:layout_constraintVertical_bias="0.018" />
+
+            <AutoCompleteTextView
+                android:id="@+id/collegename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/input_forloginpage"
+                android:hint="Enter College Name"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <AutoCompleteTextView
+                android:id="@+id/bookname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/input_forloginpage"
+                android:hint="Enter Book Name"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/collegename"
+                app:layout_constraintStart_toStartOf="@+id/collegename"
+                app:layout_constraintTop_toBottomOf="@+id/collegename" />
+
+            <AutoCompleteTextView
+                android:id="@+id/authorname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/input_forloginpage"
+                android:hint="Enter Author Name"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/bookname"
+                app:layout_constraintStart_toStartOf="@+id/bookname"
+                app:layout_constraintTop_toBottomOf="@+id/bookname" />
+
+            <AutoCompleteTextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/input_forloginpage"
+                android:hint="Enter priece For the Book"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/authorname"
+                app:layout_constraintStart_toStartOf="@+id/authorname"
+                app:layout_constraintTop_toBottomOf="@+id/authorname" />
+
+            <AutoCompleteTextView
+                android:id="@+id/sellername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/input_forloginpage"
+                android:hint="Enter Seller Name"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/price"
+                app:layout_constraintStart_toStartOf="@+id/price"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
+
+            <AutoCompleteTextView
+                android:id="@+id/phonenumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/input_forloginpage"
+                android:hint="Enter phone number"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/sellername"
+                app:layout_constraintStart_toStartOf="@+id/sellername"
+                app:layout_constraintTop_toBottomOf="@+id/sellername" />
+
+            <ImageView
+                android:id="@+id/book_image"
+                android:layout_width="0dp"
+                android:layout_height="165dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="Book Image"
+                android:src="@drawable/baseline_image_24"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/phonenumber"
+                app:layout_constraintStart_toStartOf="@+id/phonenumber"
+                app:layout_constraintTop_toBottomOf="@+id/phonenumber" />
+
+            <Button
+                android:id="@+id/upload_button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Upload Book"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/input_forloginpage"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toEndOf="@+id/book_image"
+                app:layout_constraintStart_toStartOf="@+id/book_image"
+                app:layout_constraintTop_toBottomOf="@+id/book_image"
+                app:layout_constraintVertical_bias="0.185" />
+
+            <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAE5E5"
+    tools:context=".sign_up">
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="SIGN-UP"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_forloginpage"
+        android:hint="UserName"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/registration"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/emailid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/input_forloginpage"
+        android:hint="Email Id"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_forloginpage"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/emailid"
+        app:layout_constraintStart_toStartOf="@+id/emailid"
+        app:layout_constraintTop_toBottomOf="@+id/emailid" />
+
+    <EditText
+        android:id="@+id/repeatpassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/input_forloginpage"
+        android:hint="Repeat Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/signinbtn"
+        android:layout_width="174dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#4B59BD"
+        android:text="sign-in"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/signupbtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/repeatpassword" />
+
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="174dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#4B59BD"
+        android:text="SIGN-UP"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/signinbtn"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/signinbtn"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

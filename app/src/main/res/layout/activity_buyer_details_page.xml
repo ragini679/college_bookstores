@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9EFF1F6"
+    android:orientation="vertical"
+    tools:context=".buyer_details_page">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <AutoCompleteTextView
+        android:id="@+id/col_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:hint="Enter College Name(Optional)"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#636161"
+        android:textSize="20sp"
+        android:background="@drawable/input_forloginpage"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <AutoCompleteTextView
+        android:id="@+id/branch_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/input_forloginpage"
+        android:hint="Enter Branch Name(Optional)"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#636161"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/col_name"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/col_name"
+        app:layout_constraintTop_toBottomOf="@+id/col_name" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Book_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/input_forloginpage"
+        android:hint="Enter Book Name(Optional)"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="#636161"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/branch_name"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/branch_name"
+        app:layout_constraintTop_toBottomOf="@+id/branch_name" />
+
+    <Button
+        android:id="@+id/searchbtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:text="Search...."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/input_forloginpage"
+        app:layout_constraintEnd_toEndOf="@+id/Book_name"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/Book_name"
+        app:layout_constraintTop_toBottomOf="@+id/Book_name" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="340dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/book_img"
+        android:tintMode="multiply"
+        app:layout_constraintEnd_toEndOf="@+id/searchbtn"
+        app:layout_constraintStart_toStartOf="@+id/searchbtn"
+        app:layout_constraintTop_toBottomOf="@+id/searchbtn"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
